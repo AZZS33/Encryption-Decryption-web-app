@@ -1,0 +1,89 @@
+<!-- ***** Main Banner Area Start ***** -->
+<div class="main-banner">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 align-self-center">
+        <div class="header-text">
+        
+        
+          <h2>decryption</h2>
+
+
+
+          <div class="border-button">
+            <div class="dropdown">
+              <a class="dropdown-item" (click)="selectCipher('playfair')" style="margin-left: 10px;" >Playfair</a>
+              <a class="dropdown-item" (click)="selectCipher('Vigenere')" style="margin-left: 10px;">Vigenere</a>
+              <a class="dropdown-item" (click)="selectCipher('railfence')"style="margin-left: 10px;">railfence</a>
+              <a class="dropdown-item" (click)="selectCipher('Combine Algorithms')"style="margin-left: 10px;">Combine Algorithms</a>
+
+            </div>
+            <br>
+          </div>
+          <form #loginForm="ngForm" (ngSubmit)="decrypt(loginForm)">
+          <input ngModel type="text" class="form-control" id="plaintext" name="plaintext" placeholder="Enter your text here">
+          <br>
+          <input  ngModel type="text" class="form-control" id="key" name="key" placeholder="Enter your key here">
+
+
+          <div class="main-button">
+            <br>
+            <input type ="submit" 
+            
+            name = "submit" value = "Decrypt" style = "background-color: #8458f4; /* Button background color */
+            color: #fff; /* Text color */
+            border: none;
+            padding: 10px 20px; /* Adjust padding to your preference */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            align-items: center; /* Center vertically */
+              justify-content: center; /* Center horizontally */
+              height: 6vh; display: block; /* Make input a block-level element */
+  margin-right: 20px auto;
+            ">
+
+   
+          </div>
+        </form>
+        </div>
+
+        <br>
+        <br>
+        <div class="buttons">
+          <div class="main-button">
+          
+
+
+
+
+          </div>
+
+        </div>
+        <br>
+      </div>
+     
+
+      <h2>Decrypt by:{{methodOfEncrypt}}</h2>
+      <div class="border-button">
+              
+        <div class="dropdown">
+          
+          <a class="dropdown-item" style="margin-left: 10px;">
+            <h3>Ciphered text:</h3>
+
+        <span id="sasa">{{cipherText}}</span>
+            
+            </a>
+
+          
+        
+      </div>
+      
+    </div>
+      <div class="col-lg-5 offset-lg-1"></div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,142 @@
+<!-- <div class="container mt-5" >
+
+    <div class="card" style="padding: 20px;">
+    <form #registerForm="ngForm" (ngSubmit)="register(registerForm)">
+        
+        <mat-form-field appearance="outline" class="w-100">
+            <mat-label>Username</mat-label>
+            <input matInput placeholder="Username"   ngModel
+            name="userName"
+            id="userName">
+            <mat-hint>Username</mat-hint>
+        </mat-form-field>
+    
+        <mat-form-field appearance="outline" class="w-100">
+            <mat-label>FirstName</mat-label>
+            <input matInput placeholder="FirstName"   ngModel
+            name="userFirstName"
+            id="userFirstName">
+            <mat-hint>FirstName</mat-hint>
+        </mat-form-field>
+    
+    
+        <mat-form-field appearance="outline" class="w-100">
+            <mat-label>LastName</mat-label>
+            <input matInput placeholder="lasttName"   ngModel
+            name="userLastName"
+            id="userLastName">
+            <mat-hint>lastName</mat-hint>
+        </mat-form-field>
+    
+    
+        <mat-form-field appearance="outline" class="w-100">
+            <mat-label>Password</mat-label>
+            <input matInput placeholder="Password"   ngModel
+            name="userPassword"
+            id="userPassword">
+            <mat-hint>Password</mat-hint>
+        </mat-form-field>
+    <div class="text-center">
+    
+        <button mat-raised-button color="primary" type="submit" style="width: 300px;">Sign up</button>
+    
+    </div>
+    
+    </form>
+    </div>
+    
+    </div> -->
+
+
+
+
+
+    <!-- signup-form.component.html -->
+<!-- 
+ <div class="signup-form">
+    <h2>Create an Account</h2>
+        <form #registerForm="ngForm" (ngSubmit)="register(registerForm)">
+
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input matInput placeholder="Username"   ngModel
+            name="userName"
+            id="userName" required>
+      </div>
+      <div class="form-group">
+        <label for="username">FirstName</label>
+       <input matInput placeholder="FirstName"   ngModel
+            name="userFirstName"
+            id="userFirstName" required>
+      </div>
+
+      <div class="form-group">
+        <label for="username">LastName</label>
+        <input matInput placeholder="lasttName"   ngModel
+            name="userLastName"
+            id="userLastName">
+      </div>
+
+         <div class="form-group">
+        <label for="password">Password</label>
+      <input matInput placeholder="Password"   ngModel
+            name="userPassword"
+            id="userPassword"   type="password">
+      </div>
+
+
+      <button type="submit">Sign Up</button>
+    </form>
+  </div>  -->
+
+  
+
+
+
+  <div class="page-heading normal-space">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 style="color: white;">Be part of us and Sign Up</h1>
+      
+          <form #registerForm="ngForm" (ngSubmit)="register(registerForm)">
+            <div class="buttons">
+              <div class="main-button">
+                <span style="color: red;"> {{Message}}</span>
+                <br>
+                <p>UserName:</p>            
+
+                <input type="text" ngModel name="userName" id="userName" required>
+
+                <br>
+                <input type="hidden" ngModel name="userPP" id="userPP" [value]="registerForm.value.userPassword">                <br>
+                <p>Email:</p>
+                <input type="text" ngModel name="userEmail" id="userEmail" type="email" required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}">
+                
+                <br>
+                <br>
+                <p>Password:</p>
+                <input ngModel name="userPassword" id="userPassword" type="password" required>
+              </div>
+            </div>
+            <br>
+            <br>
+            <input type="submit" name="submit" value="Submit" style="background-color: #8458f4; /* Button background color */
+            color: #fff; /* Text color */
+            border: none;
+            padding: 10px 20px; /* Adjust padding to your preference */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ; margin-right:25px ;">
+
+          </form>
+          <br>
+          <br>
+       
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
